@@ -1,67 +1,80 @@
-%está encendida la luz x por causa de y
-%esta_encendido(X,Y).
-esta_encendido(luz_frontal_antiniebla, 'r1'):- write("Faros antiniebla encendidos\n").
-esta_encendido(advertencia_direccion_asistida, 'r2'):- write("Bajo nivel de liquido de direccion asistida\n").
-esta_encendido(luz_trasera_antiniebla, 'r3'):- write("Faros antiniebla traseros encendidos\n").
-esta_encendido(liquido_parabrisas_bajo, 'r4'):- write("Poco líquido en deposito de parabrisas\n").
-esta_encendido(pastillas_freno, 'r5'):-write("Falso contacto o problema con unidad de control\nBajo nivel de líquido de frenos\nProblema con el flotador del depósito de líquido de frenos").
-esta_encendido(control_velocidad_encendido, 'r6'):-write("La velocidad crucero está encendida").
-esta_encendido(indicadores_direccion, 'r7'):-write("Direccional encendida").
-esta_encendido(sensor_lluvia_luz, 'r8'):-write("Malfuncionamiento de los sensores\nInstalación de parabrisas no original").
-esta_encendido(modo_invierno, 'r9'):-write("Modo invierno activado").
-esta_encendido(indicador_informacion, 'r10'):-write("Recordatorio de mantenimiento").
-esta_encendido(precalentamiento_diesel, 'r11'):-write("Precalentamiento del motor").
-esta_encendido(indicador_congelamiento, 'r12'):-write("Camino congelado").
-esta_encendido(advertencia_switch_encendido, 'r13'):-write("Falla en el contacto").
-esta_encendido(llave_fuera_vehiculo, 'r14'):-write("La llave no está en el vehículo").
-esta_encendido(bateria_baja_llave, 'r15'):-write("Llave con batería baja").
-esta_encendido(advertencia_distancia, 'r16'):-write("Poca distancia").
-esta_encendido(oprima_embrague, 'r17'):-write("Falta pisar el embrague").
-esta_encendido(oprima_freno, 'r18'):-write("Falta pisar el freno").
-esta_encendido(bloqueo_direccion, 'r19'):-write("Dirección bloqueada").
-esta_encendido(luces_altas, 'r20'):-write("Luces altas encendidas").
-esta_encendido(presion_llantas_bajo, 'r21'):-write("Neumáticos bajos").
-esta_encendido(informacion_luz_lateral, 'r22'):-write("La luz lateral está encendida").
-esta_encendido(falla_luz_exterior, 'r23'):-write("La luz exterior tiene falla").
-esta_encendido(advertencia_luz_freno, 'r24'):-write("No enciende la luz de freno trasera").
-esta_encendido(filtro_particulas_diesel, 'r25'):-write("Falla en el filtro de partículas diesel").
-esta_encendido(advertencia_enganche_trailer, 'r26'):-write("Enganche mal colocado o dañado").
-esta_encendido(suspension_neumatica, 'r27'):-write("Suspensión de aire").
-esta_encendido(advertencia_salida_carril, 'r28'):-write("Cambio de carril cerca de otros vehículos").
-esta_encendido(convertidor_catalitico, 'r29'):-write("Falla en el convertidor catalítico").
-esta_encendido(cinturon_seguridad, 'r30'):-write("Cinturón de seguridad no abrochado").
-esta_encendido(luz_freno_parqueo, 'r31'):-write("Freno de parqueo activado").
-esta_encendido(advertencia_alternador, 'r32'):-write("Problema en la batería\nProblema en el alternador").
-esta_encendido(asistente_parqueo, 'r33'):-write("Asistente de parqueo activado").
-esta_encendido(mantenimiento_requerido, 'r34'):-write("El auto requiere mantenimiento").
-esta_encendido(luz_adaptable, 'r35'):-write("Focos adaptativos activos").
-esta_encendido(control_rango_luz, 'r36'):-write("Control de alcance de los focos activo").
-esta_encendido(advertencia_spoiler_trasero, 'r37'):-write("Advertencia de alerón trasero").
-esta_encendido(advertencia_techo_convertible, 'r38'):-write("Advertencia de techo convertible").
-esta_encendido(advertencia_airbag, 'r39'):-write("Airbag").
-esta_encendido(advertencia_freno_mano, 'r40'):-write("Freno de mano activado").
-esta_encendido(agua_filtro_combustible, 'r41'):-write("Agua en el filtro de combustible").
-esta_encendido(airbag_desactivado, 'r42'):-write("Airbag desactivado").
-esta_encendido(falla_motorizacion, 'r43'):-write("Motor\nTransmisión").
-esta_encendido(luces_medias, 'r44'):-write("Luces medias").
-esta_encendido(filtro_aire_sucio, 'r45'):-write("Filtro de aire sucio").
-esta_encendido(conduccion_economica, 'r46'):-write("Indicador de manejo ecológico").
-esta_encendido(asistente_descenso, 'r47'):-write("Control de descenso en pendientes activado").
-esta_encendido(advertencia_temperatura, 'r48'):-write("Advertencia de alta temperatura").
-esta_encendido(advertencia_ars, 'r49'):-write("ABS defectuoso").
-esta_encendido(advertencia_filtro_combustible, 'r50'):-write("Filtro de combustible defectuoso").
-esta_encendido(puerta_abierta, 'r51'):-write("Puerta abierta").
-esta_encendido(capo_abierto, 'r52'):-write("Capó abierto").
-esta_encendido(combustible_bajo, 'r53'):-write("Nivel de combustible bajo").
-esta_encendido(advertencia_cambio_automatico, 'r54'):-write("Problemas en la caja automática").
-esta_encendido(limite_velocidad, 'r55'):-write("Limitador de velocidad activado").
-esta_encendido(damper_suspension, 'r56'):-write("Falla en los amortiguadores\nFalla en la suspensión").
-esta_encendido(baul_abierto, 'r57'):-write("Baúl abierto").
-esta_encendido(presion_aceite_baja, 'r58'):-write("Presión del aceite bajo").
-esta_encendido(desempanador_delantero, 'r59'):-write("Desempañador del parabrisas activado").
-esta_encendido(control_estabilidad_apagado, 'r60'):-write("Control de estabilidad desactivado").
-esta_encendido(sensor_lluvia, 'r61'):-write("Sensor de lluvia activado").
-esta_encendido(advertencia_emisiones_motor, 'r62'):-write("Motor").
-esta_encendido(advertencia_emisiones_motor, 'r63'):-write("Emisión de gases alta").
-esta_encendido(desempanador_trasero, 'r64'):-write("Limpiaparabrisas trasero activado").
-esta_encendido(limpiaparabrisas_delantero_automatico, 'r65'):-write("Limpiaparabrisas delantero automático").
+%Mapeo de iconos del tablero por causas de mal funcionamiento
+causas([
+    ('r1',luz_frontal_antiniebla,"Faros antiniebla encendidos\n"),
+    ('r2',advertencia_direccion_asistida,"Bajo nivel de liquido de direccion asistida\n"),
+    ('r2',advertencia_direccion_asistida,"Bajo nivel de liquido de direccion asistida\n"),
+    ('r3',luz_trasera_antiniebla,"Faros antiniebla traseros encendidos\n"),
+    ('r4',liquido_parabrisas_bajo,"Poco líquido en deposito de parabrisas\n"),
+    ('r5',pastillas_freno,"Falso contacto o problema con unidad de control\nBajo nivel de líquido de frenos\nProblema con el flotador del depósito de líquido de frenos"),
+    ('r6',control_velocidad_encendido,"La velocidad crucero está encendida"),
+    ('r7',indicadores_direccion,"Direccional encendida"),
+    ('r8',sensor_lluvia_luz,"Malfuncionamiento de los sensores\nInstalación de parabrisas no original"),
+    ('r9',modo_invierno,"Modo invierno activado"),
+    ('r10',indicador_informacion,"Recordatorio de mantenimiento"),
+    ('r11',precalentamiento_diesel,"Precalentamiento del motor"),
+    ('r12',indicador_congelamiento,"Camino congelado"),
+    ('r13',advertencia_switch_encendido,"Falla en el contacto"),
+    ('r14',llave_fuera_vehiculo,"La llave no está en el vehículo"),
+    ('r15',bateria_baja_llave,"Llave con batería baja"),
+    ('r16',advertencia_distancia,"Poca distancia"),
+    ('r17',oprima_embrague,"Falta pisar el embrague"),
+    ('r18',oprima_freno,"Falta pisar el freno"),
+    ('r19',bloqueo_direccion,"Dirección bloqueada"),
+    ('r20',luces_altas,"Luces altas encendidas"),
+    ('r21',presion_llantas_bajo,"Neumáticos bajos"),
+    ('r22',informacion_luz_lateral,"La luz lateral está encendida"),
+    ('r23',falla_luz_exterior,"La luz exterior tiene falla"),
+    ('r24',advertencia_luz_freno,"No enciende la luz de freno trasera"),
+    ('r25',filtro_particulas_diesel,"Falla en el filtro de partículas diesel"),
+    ('r26',advertencia_enganche_trailer,"Enganche mal colocado o dañado"),
+    ('r27',suspension_neumatica,"Suspensión de aire"),
+    ('r28',advertencia_salida_carril,"Cambio de carril cerca de otros vehículos"),
+    ('r29',convertidor_catalitico,"Falla en el convertidor catalítico"),
+    ('r30',cinturon_seguridad,"Cinturón de seguridad no abrochado"),
+    ('r31',luz_freno_parqueo,"Freno de parqueo activado"),
+    ('r32',advertencia_alternador,"Problema en la batería\nProblema en el alternador"),
+    ('r33',asistente_parqueo,"Asistente de parqueo activado"),
+    ('r34',mantenimiento_requerido,"El auto requiere mantenimiento"),
+    ('r35',luz_adaptable,"Focos adaptativos activos"),
+    ('r36',control_rango_luz,"Control de alcance de los focos activo"),
+    ('r37',advertencia_spoiler_trasero,"Advertencia de alerón trasero"),
+    ('r38',advertencia_techo_convertible,"Advertencia de techo convertible"),
+    ('r39',advertencia_airbag,"Airbag"),
+    ('r40',advertencia_freno_mano,"Freno de mano activado"),
+    ('r41',agua_filtro_combustible,"Agua en el filtro de combustible"),
+    ('r42',airbag_desactivado,"Airbag desactivado"),
+    ('r43',falla_motorizacion,"Motor\nTransmisión"),
+    ('r44',luces_medias,"Luces medias"),
+    ('r45',filtro_aire_sucio,"Filtro de aire sucio"),
+    ('r46',conduccion_economica,"Indicador de manejo ecológico"),
+    ('r47',asistente_descenso,"Control de descenso en pendientes activado"),
+    ('r48',advertencia_temperatura,"Advertencia de alta temperatura"),
+    ('r49',advertencia_ars,"ABS defectuoso"),
+    ('r50',advertencia_filtro_combustible,"Filtro de combustible defectuoso"),
+    ('r51',puerta_abierta,"Puerta abierta"),
+    ('r52',capo_abierto,"Capó abierto"),
+    ('r53',combustible_bajo,"Nivel de combustible bajo"),
+    ('r54',advertencia_cambio_automatico,"Problemas en la caja automática"),
+    ('r55',limite_velocidad,"Limitador de velocidad activado"),
+    ('r56',damper_suspension,"Falla en los amortiguadores\nFalla en la suspensión"),
+    ('r57',baul_abierto,"Baúl abierto"),
+    ('r58',presion_aceite_baja,"Presión del aceite bajo"),
+    ('r59',desempanador_delantero,"Desempañador del parabrisas activado"),
+    ('r60',control_estabilidad_apagado,"Control de estabilidad desactivado"),
+    ('r61',sensor_lluvia,"Sensor de lluvia activado"),
+    ('r62',advertencia_emisiones_motor,"Motor"),
+    ('r63',advertencia_emisiones_motor,"Emisión de gases alta"),
+    ('r64',desempanador_trasero,"Limpiaparabrisas trasero activado"),
+    ('r65',limpiaparabrisas_delantero_automatico,"Limpiaparabrisas delantero automático")
+]).
+% Regla para determinar la causa de un mal funcionamiento
+causa_mal_funcionamiento_para_icono(Icono, Causa) :-
+    causas(ListaCausas),
+    member((Icono, Causa, _), ListaCausas).
+    
+% Regla para imprimir el mensaje de la causa de mal funcionamiento
+imprimir_causa_mal_funcionamiento(Icono) :-
+    causas(ListaCausas),
+    member((Icono, _, Mensaje), ListaCausas),
+    write(Mensaje),
+    nl.
