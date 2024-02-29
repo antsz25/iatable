@@ -20,3 +20,7 @@ Es necesario instalar SwiProlog. En WSL o Ubuntu, se puede hacer a través de:
 sudo apt install swi-prolog
 
 Sin embargo, una vez desplegado, el servidor tendrá SwiProlog instalado.
+
+**Recordatorio**
+Recuerda realizar git pull para actualizar a la última versión del programa antes de realizar cualquier cambio en un documento.
+
