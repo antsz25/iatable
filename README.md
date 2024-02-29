@@ -1,16 +1,22 @@
-# iatable
-Para correrlo:
-Backend (Ocupas de variables de entorno): npm install && npm run serve:dev
-	PORT: 3000
-	SECRET: (posible futuro uso, pero es la llave para encriptar)
-Frontend: npm install && npm run dev
+## iatable
 
-Despues de su primera ejecucion, nadamas ocupas correr los scripts correspondientes:
-Back - npm run serve:dev
-Front - npm run dev
+### Para correrlo:
 
-Es necesario instalar SwiProlog
-En wsl o ubuntu se hace a traves de:
-	sudo apt install swi-prolog
-Aunque una vez que se despliegue, el servidor tendra swi-prolog despues.
+**Backend (requiere variables de entorno):**
+npm install && npm run serve:dev
 
+Variables de entorno:
+- `PORT`: 3000
+- `SECRET`: (posible futuro uso, es la llave para encriptar)
+
+**Frontend:**
+npm install && npm run dev
+
+Después de la primera ejecución, simplemente ejecuta los scripts correspondientes:
+- Para el Backend: `npm run serve:dev`
+- Para el Frontend: `npm run dev`
+
+Es necesario instalar SwiProlog. En WSL o Ubuntu, se puede hacer a través de:
+sudo apt install swi-prolog
+
+Sin embargo, una vez desplegado, el servidor tendrá SwiProlog instalado.
