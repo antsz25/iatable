@@ -1,29 +1,33 @@
 <template>
   <div class="sideBar">
     <div class="sideBarDesign">
+        <div class="mobilePresentation">
+            <img src="@/assets/VolkwagenMobile.png" width="140" alt="inicio">
+            <h3>Volkswagen Beetle 2000</h3>
+        </div>
         <router-link 
-        to="/about" class="links">
+        to="/" class="links">
             <div class="linkPageIcons">
                 <img src="@/assets/user.png" width="70" alt="inicio">
                 <h3 class="linkText">Inicio</h3>
             </div>
         </router-link>     
         <router-link 
-        to="/" class="links">
+        to="/diagnostico" class="links">
             <div class="linkPageIcons">
                 <img src="@/assets/settings.png" width="70" alt="inicio">
                 <h3 class="linkText">Diagnosticar</h3>
             </div>
         </router-link>   
         <router-link 
-        to="/" class="links">
+        to="/visualizer" class="links">
             <div class="linkPageIcons">
                 <img src="@/assets/visualizer.png" width="70" alt="inicio">
                 <h3 class="linkText">Visualizar</h3>
             </div>
         </router-link>   
         <router-link 
-        to="/" class="links">
+        to="/manuel" class="links">
             <div class="linkPageIcons">
                 <img src="@/assets/manual.png" width="70" alt="inicio">
                 <h3 class="linkText">Manual</h3>
@@ -45,6 +49,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.mobilePresentation {
+    display: none;
+    color: white;
+    font-size: 20px;
+}
 .sideBar {
     min-width: 300px;
     background: linear-gradient(180deg, rgba(43, 60, 215, 0.2) 0%, rgba(116, 104, 128, 0.2) 100%), #000000;
@@ -53,6 +62,7 @@ export default defineComponent({
 .sideBarDesign {    
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     height: 100%;
     gap: 25px;
 }
@@ -78,6 +88,9 @@ export default defineComponent({
   .sideBarDesign {
     justify-content: center;
     height: 100vh;
+  }
+  .mobilePresentation {
+    display: block;
   }
 }
 </style>    

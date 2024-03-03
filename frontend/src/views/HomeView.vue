@@ -2,7 +2,7 @@
   <div class="home">
     <side-bar />
     <div class="carLogo"> 
-      <img src="@/assets/Volkswagen.jpg" alt="volkswagenLogo">  
+      <img src="@/assets/Volkswagen.png" alt="volkswagenLogo">  
       <h1>Volkswagen Beetle 2000</h1>
     </div>
   </div>
