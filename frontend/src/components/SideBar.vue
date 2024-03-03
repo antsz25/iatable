@@ -56,9 +56,7 @@ export default defineComponent({
 }
 .sideBar {
     min-width: 300px;
-    background : linear-gradient(0deg, #1F292B, #1F292B),
-    linear-gradient(180deg, rgba(122, 39, 206, 0.2) 0%, rgba(116, 104, 128, 0.2) 100%);
-    background-color: rgba(31, 41, 43, 1);
+    background: linear-gradient(180deg, rgba(43, 60, 215, 0.2) 0%, rgba(116, 104, 128, 0.2) 100%), #000000;
     padding-left: 30px;
 }
 .sideBarDesign {    
