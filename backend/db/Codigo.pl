@@ -1,10 +1,10 @@
 %Mapeo de iconos del tablero por causas de mal funcionamiento
 causas([
-    ('r1',luz_frontal_antiniebla,"Faros antiniebla encendidos\n"),
-    ('r2',advertencia_direccion_asistida,"Bajo nivel de liquido de direccion asistida\n"),
-    ('r2',advertencia_direccion_asistida,"Bajo nivel de liquido de direccion asistida\n"),
-    ('r3',luz_trasera_antiniebla,"Faros antiniebla traseros encendidos\n"),
-    ('r4',liquido_parabrisas_bajo,"Poco líquido en deposito de parabrisas\n"),
+    ('r1',luz_frontal_antiniebla,"Faros antiniebla encendidos"),
+    ('r2',advertencia_direccion_asistida,"Bajo nivel de liquido de direccion asistida"),
+    ('r2',advertencia_direccion_asistida,"Bajo nivel de liquido de direccion asistida"),
+    ('r3',luz_trasera_antiniebla,"Faros antiniebla traseros encendidos"),
+    ('r4',liquido_parabrisas_bajo,"Poco líquido en deposito de parabrisas"),
     ('r5',pastillas_freno,"Falso contacto o problema con unidad de control\nBajo nivel de líquido de frenos\nProblema con el flotador del depósito de líquido de frenos"),
     ('r6',control_velocidad_encendido,"La velocidad crucero está encendida"),
     ('r7',indicadores_direccion,"Direccional encendida"),
