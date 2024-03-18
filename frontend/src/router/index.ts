@@ -33,7 +33,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/visualizer',
     name: 'visualizer',
-    component: DiagnosticView,
+    component:  VisualizerView,
     meta: { title: "Visualizer"}
   },
   {

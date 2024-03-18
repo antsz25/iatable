@@ -27,7 +27,7 @@
             </div>
         </router-link>   
         <router-link 
-        to="/manuel" class="links">
+        to="/manual" class="links">
             <div class="linkPageIcons">
                 <img src="@/assets/manual.png" width="70" alt="inicio">
                 <h3 class="linkText">Manual</h3>
