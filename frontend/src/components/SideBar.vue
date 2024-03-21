@@ -15,7 +15,7 @@
         <router-link 
         to="/diagnostico" class="links">
             <div class="linkPageIcons">
-                <img src="@/assets/settings.png" width="70" alt="inicio">
+                <img src="@/assets/diagnosticar.png" width="70" alt="inicio">
                 <h3 class="linkText">Diagnosticar</h3>
             </div>
         </router-link>   
