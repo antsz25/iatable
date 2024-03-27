@@ -4,14 +4,15 @@
       <h2>Seleccione una o más luces para obtener diagnostico!</h2>
     </div>
     <div class="full">
-      <div v-for="(luz, index) in luces" :key="index" class="luces-wrapper">
+      <div v-for="(luz, index) in luces" :key="index" class="luces-wrapper" tabindex="-1" @click="lightSelected(luz.Name)">
         <img :src="require(`@/assets/${luz.imageName}.png`)" width="100">
       </div>
+      {{ lightsSelected }}
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   data() {
     return {
@@ -176,8 +177,17 @@ export default {
           Name: 'r40',
           imageName: "luz40"
         }
-      ]
+      ],
+      lightsSelected: []
     }
+  },
+  methods: {
+    lightSelected(light: string) {
+      this.lightsSelected.push(light);
+      this.lightsSelected = this.lightsSelected.filter((item, index) => {
+       return this.lightsSelected.indexOf(item) === index;
+      })
+    },
   }
 }
 </script>
@@ -188,7 +198,11 @@ export default {
   width: 10%;
   align-items: center;
   justify-content: center;
-  height: 10%;
+  border-radius: 100px;
+}
+.luces-wrapper:focus {
+  background-color: aqua;
+
 }
 .full {
   width: 100%;
