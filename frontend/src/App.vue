@@ -70,7 +70,7 @@ nav a.router-link-exact-active {
 
 .top-bar {
   background: linear-gradient(180deg, rgba(43, 60, 215, 0.2) 0%, rgba(116, 104, 128, 0.2) 100%), #000000;
-  height: 63px;
+  height: 10%;
   display: flex;
   justify-content: space-between;
   padding: 15px;
