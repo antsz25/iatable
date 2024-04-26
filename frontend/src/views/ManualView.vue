@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>NO soy manuel</h1>
+    <h1>Manual de luces del tablero!</h1>
   </div>
 </template>
 

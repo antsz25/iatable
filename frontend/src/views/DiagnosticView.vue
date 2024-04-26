@@ -2,9 +2,9 @@
   <div class="flex-col">
     <div class="titulo">
       <h2>Seleccione una o más luces para obtener diagnostico!</h2>
-      <button @click="borrarSeleccion" class="danger-outline">
-        <font-awesome-icon icon="times" /> Borrar Luces
-      </button>
+      <b-button @click="borrarSeleccion" variant="outline-danger">
+        <font-awesome-icon icon="times" /> Borrar Selección
+      </b-button>
     </div>
     <div class="full">
       <div v-for="(luz, index) in luces" :key="index" class="luces-wrapper" :class="luz.isSelected ? 'active-light': 'inactive-light'"  @click="lightSelected(luz)">
@@ -268,15 +268,19 @@ export default defineComponent({
   width: 10%;
   align-items: center;
   justify-content: center;
-  border-radius: 100px;
+  box-shadow: 2px;
   cursor: pointer;
 }
 .luces-wrapper:focus {
   background-color: aqua;
 
-}
+} 
 .active-light {
-  background-color: rgba(107, 247, 85, 0.711);
+  border-radius: 10px;
+  background: linear-gradient(217deg, #6bf755b5, rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, #6bf755b5, rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, #6bf755b5, rgba(0,0,255,0) 70.71%);
+
 }
 
 .inactive-light {
