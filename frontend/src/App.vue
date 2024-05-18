@@ -3,11 +3,11 @@
     <div class="top-bar" v-if="$route.path!='/'">
       <div class="header-imageTitle">
         <img :src="require(`@/assets/${getActualURL.toLowerCase()}.png`)" alt="Inicio" width="60">
-        <h2>{{ getActualURL }}</h2>
+        <h2>{{ getActualURL == "Manual" ? "Guia de indicadores" : getActualURL }}</h2>
       </div>
       <img src="@/assets/exit.png" alt="" width="60" @click="goToHome" style="cursor: pointer;">
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

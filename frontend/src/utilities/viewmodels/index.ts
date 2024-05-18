@@ -3,4 +3,5 @@ export interface LuzVM {
     imageName: string;
     isSelected: boolean;
     longName: string;
+    description?: string; 
 }

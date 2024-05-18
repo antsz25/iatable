@@ -18,7 +18,7 @@
       id="modal"
       centered 
       title="Diagnostico">
-      <h2>Lista de luces seleccionadas</h2>
+      <h5>Lista de luces seleccionadas</h5>
       <ul>
         <li v-for="(luz, index) in listofLightLongName" :key="index">
         {{ luz }}</li>
@@ -34,6 +34,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { LuzVM } from "@/utilities/viewmodels"
+import LucesService from "@/services/LucesService"
 
 export default defineComponent({
   data() {
@@ -282,7 +283,8 @@ export default defineComponent({
       ] as LuzVM[],
       lightsSelected: [{}] as LuzVM[],
       listOfLightsShortName: [] as string[],
-      listofLightLongName: [] as string[]
+      listofLightLongName: [] as string[],
+      mensajeRespuesta: ""
     }
   },
   methods: {
@@ -296,6 +298,13 @@ export default defineComponent({
         this.listOfLightsShortName.splice(indice2, 1);
         let indice3 = this.listofLightLongName.indexOf(light.Name);
         this.listofLightLongName.splice(indice3, 1);
+        LucesService.$GetLightResponse(this.listOfLightsShortName)
+        .then((response) => {
+          this.mensajeRespuesta = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        })
       }
       else
       {

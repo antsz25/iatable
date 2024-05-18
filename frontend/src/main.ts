@@ -7,6 +7,7 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faSquareFull } from "@fortawesome/free-solid-svg-icons";
 import { BootstrapVue } from "bootstrap-vue"
+import AxiosConfiguration from "@/utilities/configuration/axios/index";
 
 
 import "bootstrap/dist/css/bootstrap.css"
@@ -27,3 +28,4 @@ new Vue({
   router,
   render: h => h(App)  
 }).$mount('#app')
+AxiosConfiguration.ConfigureInterceptors();
