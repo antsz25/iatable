@@ -11,7 +11,7 @@
         <img :src="require(`@/assets/${luz.imageName}.png`)" width="100">
       </div>
       <div>
-        <b-button variant="primary" @click="openModal" v-b-modal.modal :disabled="listOfLightsShortName.length<=0">Obtener Diagnostico</b-button>
+        <b-button variant="primary" v-b-modal.modal :disabled="listOfLightsShortName.length<=0" @click="GetDiagnostic">Obtener Diagnostico</b-button>
         <p>Lista de luces seleccionadas: {{listOfLightsShortName}}</p>
       </div>
       <b-modal 
@@ -25,7 +25,7 @@
       </ul>
       <hr>
       <h5>Diagnositco realizado, se recomienda: </h5>
-      <p>PLACEHOLDER</p>
+      <p>{{ mensajeRespuesta ?? "Error" }}</p>
       </b-modal>
     </div>
   </div>
@@ -35,6 +35,7 @@
 import { defineComponent } from "vue";
 import { LuzVM } from "@/utilities/viewmodels"
 import LucesService from "@/services/LucesService"
+import LightsService from "@/utilities/services/LightsService";
 
 export default defineComponent({
   data() {
@@ -289,7 +290,6 @@ export default defineComponent({
   },
   methods: {
     lightSelected(light: LuzVM) {
-      console.log(light);
       if(light.isSelected) {
           light.isSelected = false;
           let indice = this.lightsSelected.indexOf(light);
@@ -298,13 +298,6 @@ export default defineComponent({
         this.listOfLightsShortName.splice(indice2, 1);
         let indice3 = this.listofLightLongName.indexOf(light.Name);
         this.listofLightLongName.splice(indice3, 1);
-        LucesService.$GetLightResponse(this.listOfLightsShortName)
-        .then((response) => {
-          this.mensajeRespuesta = response.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        })
       }
       else
       {
@@ -324,6 +317,26 @@ export default defineComponent({
       })
       this.listOfLightsShortName = [];
       this.listofLightLongName = [];
+    },
+    GetDiagnostic() {
+      LightsService.$GetDiagnosticoFromLightId(this.listOfLightsShortName[0])
+      .then((response) => {
+        this.mensajeRespuesta = response.data;
+        this.$bvToast.toast("Informacion obtenida correctamente", {
+          title: "Informacion del Problema encontrada",
+          solid: true,
+          toaster: "b-toaster-bottom-right",
+          variant: "success"
+        })
+      })
+      .catch(() => {
+        this.$bvToast.toast("Error trayendo la informacion del problema", {
+          title: "Luces Problema",
+          solid: true,
+          toaster: "b-toaster-bottom-right",
+          variant: "danger"
+        })
+      })
     }
   }
 });

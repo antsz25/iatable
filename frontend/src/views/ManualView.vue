@@ -76,7 +76,7 @@ export default {
           Name: 'r6',
           imageName: "luz6",
           isSelected: false,
-          description: "El regulador de velocidad (GRA)  está regulado. El control de  crucero adaptativo (ACC) está  conectado y activo.",
+          description: "El regulador de velocidad (GRA)  está regulado. El control de  crucero adaptativo (ACC) está  conectado y activo",
           longName: "Regulador de velocidad regulado. Control de crucero adaptativo conectado y activo"
         },
         {
@@ -104,14 +104,14 @@ export default {
           Name: 'r10',
           imageName: "luz10",
           isSelected: false,
-          description: "Presión insuficiente del aceite.  Detenga el motor y compruebe  el nivel de aceite del motor",
+          description: "Presión insuficiente del aceite. Detenga el motor y compruebe  el nivel de aceite del motor",
           longName: "Nivel de aceite insuficiente"
         },
         {
           Name: 'r11',
           imageName: "luz11",
           isSelected: false,
-          description: "Si se enciende: hay una avería  en el ESC o este se ha desconectado por causas del sistema.",
+          description: "Si se enciende: hay una avería  en el ESC o este se ha desconectado por causas del sistema",
           longName: "Avería en el ESC"
         },
         {
@@ -202,7 +202,7 @@ export default {
           Name: 'r24',
           imageName: "luz24",
           isSelected: false,
-          description: "El control de crucero adaptativo  (ACC) no está disponible.",
+          description: "El control de crucero adaptativo  (ACC) no está disponible",
           longName: "Control de crucero adaptativo (ACC) no disponible"
         },
         {
@@ -265,14 +265,14 @@ export default {
           Name: 'r33',
           imageName: "luz33",
           isSelected: false,
-          description: "La luz trasera antiniebla está encendida.",
+          description: "La luz trasera antiniebla está encendida",
           longName: "Luz trasera antiniebla encendida"
         },
         {
           Name: 'r34',
           imageName: "luz34",
           isSelected: false,
-          description: "El tapón del depósito de combustible no está cerrado correctamente.",
+          description: "El tapón del depósito de combustible no está cerrado correctamente",
           longName: "Tapón del depósito de combustible abierto"
         },
         {
@@ -286,7 +286,7 @@ export default {
           Name: 'r36',
           imageName: "luz36",
           isSelected: false,
-          description: "El asistente de la luz de carretera está conectad",
+          description: "El asistente de la luz de carretera está conectado",
           longName: "Asistente de luz de carretera conectado"
         },
         {
