@@ -319,7 +319,7 @@ export default defineComponent({
       this.listofLightLongName = [];
     },
     GetDiagnostic() {
-      LightsService.$GetDiagnosticoFromLightId(this.listOfLightsShortName[0])
+      LightsService.$GetDiagnosticoFromLightId(this.listOfLightsShortName)
       .then((response) => {
         this.mensajeRespuesta = response.data;
         this.$bvToast.toast("Informacion obtenida correctamente", {
