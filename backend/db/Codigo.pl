@@ -644,7 +644,8 @@ diagnostico([r14,r38], "Avería en el catalizador con preaviso de servicio.").
 diagnostico([r14,r39], "Avería en el catalizador con motor en marcha.").
 diagnostico([r14,r40], "Avería en el catalizador con temperatura exterior inferior a +4º C.").
 
-% Function to map icon identifiers to their corresponding messages and print the diagnostics
+% Funcion para mapear los identificadores de los iconos 
+% a sus respectivos mensajes e imprime el diagnostico
 imprimir_causa_mal_funcionamiento(Iconos) :-
     causas(ListaCausas),
     maplist(mapeo_de_iconos(ListaCausas), Iconos, Mensajes),
@@ -652,9 +653,9 @@ imprimir_causa_mal_funcionamiento(Iconos) :-
         format('~w~n', [Diagnostico])
     ;   format('~w~n', [Mensajes])
     ).
-
+% Funcion para mapear los identificadores de los iconos 
 mapeo_de_iconos(ListaCausas, Icono, Mensaje) :-
     member((Icono, _, Mensaje), ListaCausas).
 
-% In case of no match
+% En el caso de que no haya diagnosticos
 mapeo_de_iconos(_, Icono, no_diagnostic(Icono)).

@@ -1,4 +1,3 @@
-const iconschema = require('../models/icon.model');
 const { exec } = require('child_process');
 
 // Make the request to the Prolog server to get the cause of the malfunction
