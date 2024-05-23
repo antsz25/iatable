@@ -648,14 +648,16 @@ diagnostico([r14,r40], "Avería en el catalizador con temperatura exterior infer
 % a sus respectivos mensajes e imprime el diagnostico
 imprimir_causa_mal_funcionamiento(Iconos) :-
     causas(ListaCausas),
-    maplist(mapeo_de_iconos(ListaCausas), Iconos, Mensajes),
     (   diagnostico(Iconos, Diagnostico) ->
         format('~w~n', [Diagnostico])
-    ;   format('~w~n', [Mensajes])
+    ;   findall(Mensaje, (member(Icono, Iconos), mapeo_de_iconos(ListaCausas, Icono, Mensaje)), Mensajes),
+        (   Mensajes == [] ->
+            format('Diagnosticos individuales: ~w~n', [Mensajes])
+        ;   format('CODE 404')
+        )
     ).
-% Funcion para mapear los identificadores de los iconos 
-mapeo_de_iconos(ListaCausas, Icono, Mensaje) :-
-    member((Icono, _, Mensaje), ListaCausas).
 
-% En el caso de que no haya diagnosticos
+% Función para mapear los identificadores de los iconos a mensajes individuales
+mapeo_de_iconos(ListaCausas, Icono, Mensaje) :-
+    member((Icono, _, Mensaje), ListaCausas), !.
 mapeo_de_iconos(_, Icono, no_diagnostic(Icono)).
