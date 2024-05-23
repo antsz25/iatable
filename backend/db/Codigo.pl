@@ -255,14 +255,14 @@ diagnostico([r5,r14], "Motor en marcha con avería en el catalizador.").
 diagnostico([r5,r15], "Motor en marcha con pastillas de freno delanteras desgastadas.").
 diagnostico([r5,r16], "Motor en marcha con depósito de combustible casi vacío.").
 diagnostico([r5,r17], "Motor en marcha con precalentamiento del motor diesel.").
-diagnostico([r5,r18], "Motor en marcha con cinturón de seguridad desabrochado.").
-diagnostico([r5,r19], "Motor en marcha con cajuela abierta.").
-diagnostico([r5,r20], "Motor en marcha con puerta abierta.").
-diagnostico([r5,r21], "Motor en marcha con cambio de doble embrague DSG sobrecalentado.").
+diagnostico([r5,r18], "Indica que el motor está en marcha pero el conductor o pasajero no tiene puesto el cinturón de seguridad, lo que puede ser peligroso en caso de un accidente.").
+diagnostico([r5,r19], "Indica que el motor está en marcha pero la cajuela del vehículo está abierta, lo cual es una situación anormal y puede causar daños al vehículo si se conduce así.").
+diagnostico([r5,r20], "Indica que el motor está en marcha pero una puerta del vehículo está abierta, lo que puede ser peligroso y necesita atención inmediata.").
+diagnostico([r5,r21], "Indica que el motor está en marcha y el sistema de cambio de doble embrague DSG está experimentando un sobrecalentamiento, lo cual puede afectar el rendimiento del vehículo.").
 diagnostico([r5,r22], "Motor en marcha con fallo de batería.").
 diagnostico([r5,r23], "Motor en marcha con fallo de la dirección asistida electromecánica.").
 diagnostico([r5,r24], "Motor en marcha con control de crucero adaptativo (ACC) no disponible.").
-diagnostico([r5,r25], "Motor en marcha con freno de mano puesto.").
+diagnostico([r5,r25], "Indica que el motor está en marcha pero el freno de mano sigue activado, lo cual es una situación anormal y puede causar daños al vehículo si se conduce de esta manera").
 diagnostico([r5,r26], "Motor en marcha con nivel de aceite del motor bajo o avería en el sistema de aceite del motor.").
 diagnostico([r5,r27], "Motor en marcha con filtro de partículas diesel saturado de hollín.").
 diagnostico([r5,r28], "Motor en marcha con avería en el cambio automático.").
@@ -278,19 +278,18 @@ diagnostico([r5,r37], "Motor en marcha con sistema Start-Stop disponible.").
 diagnostico([r5,r38], "Motor en marcha con preaviso de servicio.").
 diagnostico([r5,r39], "Motor en marcha con motor en marcha.").
 diagnostico([r5,r40], "Motor en marcha con teléfono móvil conectado mediante Bluetooth.").
-diagnostico([r5, r10, r13], "Motor en marcha con luz de aceite bajo encendida y presión de neumáticos baja.").
-diagnostico([r5, r8, r11], "Motor en marcha con luz de airbag encendida y luz de ESC encendida.").
-diagnostico([r5, r12, r15], "Motor en marcha con luz de fallo en el alumbrado encendida y luz de desgaste de frenos encendida.").
-diagnostico([r5, r9, r2], "Motor en marcha con luz de nivel de lava cristales bajo encendida y luz de circulación diurna activada.").
-diagnostico([r5, r14, r10], "Motor en marcha con luz de catalizador encendida y luz de nivel de aceite insuficiente encendida.").
-diagnostico([r5, r22, r38], "Motor en marcha con fallo de batería y luz de preaviso de servicio encendida.").
-diagnostico([r5, r28, r30], "Motor en marcha con avería en el cambio automático y régimen del motor limitado.").
-diagnostico([r5, r31, r29], "Motor en marcha con avería en el sistema híbrido y luz de estado de carga de la batería móvil.").
-diagnostico([r5, r40, r38], "Motor en marcha con luz de temperatura exterior inferior a +4º C y luz de preaviso de servicio.").
-diagnostico([r5, r7, r10, r12], "Motor en marcha con ABS no funcionando correctamente, luz de nivel de aceite insuficiente y luz de fallo en el alumbrado encendida.").
-diagnostico([r5, r21, r10, r40], "Motor en marcha con cambio de doble embrague DSG sobrecalentado, luz de nivel de aceite insuficiente y luz de temperatura exterior inferior a +4º C.").
-diagnostico([r5, r23, r6], "Motor en marcha, luz de fallo en la dirección asistida electromecánica y regulador de velocidad regulado.").
-diagnostico([r5, r16, r9, r10], "Motor en marcha con luz de depósito de combustible casi vacío, luz de nivel del tanque de lava cristales bajo y luz de nivel de aceite insuficiente.").
+diagnostico([r5, r10, r13], "Indica que el nivel de aceite es insuficiente y la presión de los neumáticos es demasiado baja, lo que puede ser peligroso para el funcionamiento del vehículo y para la persona.").
+diagnostico([r5, r8, r11], "Indica una situación de seguridad crítica, ya que tanto el sistema de airbags como el control de estabilidad electrónico están comprometidos.").
+diagnostico([r5, r12, r15], "Indica problemas importantes de visibilidad y seguridad, ya que el sistema de iluminación y las pastillas de freno están afectados.").
+diagnostico([r2, r5, r9], "Indica una combinación de problemas menores pero que afectan la visibilidad, como el nivel bajo de líquido limpiaparabrisas y la activación de las luces de circulación diurna.").
+diagnostico([r5, r10, r14], "Indica problemas potencialmente graves en el sistema de escape y en el motor, que pueden afectar el rendimiento y la eficiencia del vehículo.").
+diagnostico([r5, r22, r38], "Indica que el motor está en marcha, la batería está fallando y el vehículo necesita mantenimiento próximamente.").
+diagnostico([r5, r28, r30], "Indica que el motor está en marcha, el sistema de cambio automático tiene una avería y el régimen del motor está limitado, lo cual puede afectar la capacidad de conducción del vehículo.").
+diagnostico([r5, r29, r31], "Indica que el motor está en marcha, el sistema híbrido tiene una avería y se muestra el estado de carga de la batería móvil, lo cual puede requerir atención inmediata.").
+diagnostico([r5, r38, r40], "Indica que la temperatura exterior es baja y que el vehículo necesita mantenimiento próximamente.").
+diagnostico([r5, r7, r10, r12], "Indica problemas críticos que afectan la seguridad y el funcionamiento del vehículo, problemas con ABS, nivel de aceite insuficiente y fallo en el alumbrado del vehiculo.").
+diagnostico([r5, r10, r21, r40], "Indica problemas relacionados con el sistema de transmisión y el nivel de aceite en condiciones de baja temperatura.").
+diagnostico([r5, r9, r10, r16], "Indica que varios niveles de líquidos importantes están bajos, lo que puede afectar el funcionamiento del vehículo.").
 diagnostico([r5,r42], "Motor en marcha con temperatura exterior inferior a +4º C.").
 diagnostico([r6,r1], "Regulador de velocidad regulado y luz de carretera encendida.").
 diagnostico([r6,r2], "Regulador de velocidad regulado y luz de circulación diurna activada.").
