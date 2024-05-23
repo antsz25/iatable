@@ -18,14 +18,14 @@
       id="modal"
       centered 
       title="Diagnostico">
-      <h5>Lista de luces seleccionadas</h5>
-      <ul>
-        <li v-for="(luz, index) in listofLightLongName" :key="index">
-        {{ luz }}</li>
-      </ul>
-      <hr>
-      <h5>Diagnositco realizado, se recomienda: </h5>
-      <p>{{ mensajeRespuesta ?? "Error" }}</p>
+      <h5>Diagnostico Realizado</h5>
+      <div v-if="tipoResputesta == 201">
+        No se encontro un diagnostico exacto pero aqui esta el diagnostico individual
+        <ul v-for="(mensaje, index) in mensajeRespuesta" :key="index">
+          <li>{{ mensaje.mensaje }}</li>
+        </ul>
+      </div>
+      <p v-else>{{ mensajeRespuesta[0] ?? "Error" }}</p>
       </b-modal>
     </div>
   </div>
@@ -36,6 +36,7 @@ import { defineComponent } from "vue";
 import { LuzVM } from "@/utilities/viewmodels"
 import LucesService from "@/services/LucesService"
 import LightsService from "@/utilities/services/LightsService";
+import { AxiosResponse } from "axios";
 
 export default defineComponent({
   data() {
@@ -285,7 +286,8 @@ export default defineComponent({
       lightsSelected: [{}] as LuzVM[],
       listOfLightsShortName: [] as string[],
       listofLightLongName: [] as string[],
-      mensajeRespuesta: ""
+      mensajeRespuesta: "",
+      tipoResputesta: 0
     }
   },
   methods: {
@@ -320,8 +322,11 @@ export default defineComponent({
     },
     GetDiagnostic() {
       LightsService.$GetDiagnosticoFromLightId(this.listOfLightsShortName)
-      .then((response) => {
+      .then((response:any) => {
+        
         this.mensajeRespuesta = response.data;
+        this.tipoResputesta = response.status ;
+        
         this.$bvToast.toast("Informacion obtenida correctamente", {
           title: "Informacion del Problema encontrada",
           solid: true,
